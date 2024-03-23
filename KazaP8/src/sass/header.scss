@@ -4,6 +4,13 @@
     nav {
         ul {
             display: flex;
+            a {
+                text-decoration: none;
+                color: black;
+                &.underline {
+                    text-decoration: underline;
+                }
+            }
             li {
                 margin: 0 10px;
                 list-style: none;

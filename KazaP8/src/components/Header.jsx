@@ -1,4 +1,5 @@
 import logoKasa from "../assets/images/LOGO.png";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -6,8 +7,22 @@ const Header = () => {
             <img src={logoKasa} alt="logo Kasa" />
             <nav>
                 <ul>
-                    <li>Acceuil</li>
-                    <li>A propos</li>
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? "underline" : ""
+                        }
+                    >
+                        <li>Acceuil</li>
+                    </NavLink>
+                    <NavLink
+                        to="/About"
+                        className={({ isActive }) =>
+                            isActive ? "underline" : ""
+                        }
+                    >
+                        <li>A propos</li>
+                    </NavLink>
                 </ul>
             </nav>
         </div>
