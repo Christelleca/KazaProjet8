@@ -10,6 +10,8 @@ const Annonce = () => {
     const { id } = useParams();
     const annonce = findAnnonceID(id);
     const pictures = annonce.pictures;
+    const hostName = annonce.host.name;
+    const hostPicture = annonce.host.picture;
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const arrowLeft = () => {
@@ -23,8 +25,6 @@ const Annonce = () => {
             prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
         );
     };
-
-    const [showDescription, setShowDescription] = useState(false);
 
     return (
         <div>
@@ -47,11 +47,29 @@ const Annonce = () => {
                     onClick={arrowRight}
                 />
             </div>
-            <p>{annonce.title}</p>
-            <h2 onClick={() => setShowDescription(!showDescription)}>
-                Description
-            </h2>
-            {showDescription && <p>{annonce.description}</p>}
+            <h1>{annonce.title}</h1>
+            <p>{annonce.location}</p>
+            {annonce.tags.map((tag, index) => (
+                <p key={index}>{tag}</p>
+            ))}
+            <img src={hostPicture} alt={hostName} />
+            <p>{hostName}</p>
+            {[...Array(5)].map((_, index) => (
+                <i
+                    key={index}
+                    className={`fa-star ${
+                        index < annonce.rating ? "fa-solid" : "fa-regular"
+                    }`}
+                ></i>
+            ))}
+            <h2>Description</h2>
+            <p>{annonce.description}</p>
+            <h2>Équipements</h2>
+            <ul>
+                {annonce.equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                ))}
+            </ul>
         </div>
     );
 };
