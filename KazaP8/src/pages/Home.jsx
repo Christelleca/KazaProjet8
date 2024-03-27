@@ -1,5 +1,5 @@
-import Thumb from "../thumb";
-import annonces from "../../data/annonces.json";
+import Thumb from "../components/Thumb.jsx";
+import annonces from "../data/annonces.json";
 
 const Home = () => {
     return (

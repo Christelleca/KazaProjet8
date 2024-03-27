@@ -1,7 +1,7 @@
-import Header from "./Header";
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Annonce from "./annonce";
+import Annonce from "./pages/AnnoncePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="annonce/:id" element={<Annonce />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/Annonce/:id" element={<Annonce />} />
             </Routes>
         </BrowserRouter>
     );
