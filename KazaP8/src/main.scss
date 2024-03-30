@@ -2,8 +2,22 @@
 @use "./sass/header";
 @use "./sass/home";
 @use "./sass/thumb";
-@use "./sass/annonce";
+@use "./sass/annoncePage";
 @use "./sass/slider";
 @use "./sass/footer";
 @use "./sass/notFound.scss";
 @use "./sass/about.scss";
+
+* {
+    font-family: "montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

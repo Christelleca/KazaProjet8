@@ -1,6 +1,6 @@
 .thumb {
-    width: 250px;
-    height: 250px;
+    max-width: 340px;
+    height: 340px;
     border-radius: 25px;
     cursor: pointer;
     position: relative;
@@ -10,11 +10,16 @@
         object-fit: cover;
         border-radius: 25px;
     }
-    h2 {
+    .title_content {
         position: absolute;
         bottom: 0;
         left: 0;
-        color: white;
-        font-size: 2rem;
+        height: 55px;
+        padding: 15px;
+        width: 231px;
+        p {
+            color: white;
+            font-weight: 700;
+        }
     }
 }

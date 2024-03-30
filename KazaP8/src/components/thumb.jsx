@@ -5,7 +5,9 @@ const Thumb = ({ annonces }) => {
     return annonces.map((annonce) => (
         <Link to={`/annonce/${annonce.id}`} className="thumb" key={annonce.id}>
             <img src={annonce.cover} alt={annonce.title} />
-            <h2>{annonce.title}</h2>
+            <div className="title_content">
+                <p>{annonce.title}</p>
+            </div>
         </Link>
     ));
 };

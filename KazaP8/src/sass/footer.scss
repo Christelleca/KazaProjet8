@@ -1,11 +1,24 @@
 .footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 209px;
+    height: 230px;
+    margin: 0;
     background: black;
-    p {
-        color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    img {
+        width: 122px;
+        height: 39.444px;
+    }
+    .footer_txt {
+        display: flex;
+        p {
+            margin: 4px;
+            color: white;
+        }
     }
 }

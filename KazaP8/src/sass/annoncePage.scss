@@ -1,0 +1,117 @@
+.pictures {
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    height: 415px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    .arrow_content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        left: 50%;
+        padding: 0 10px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        .arrow_left {
+            cursor: pointer;
+            width: 125px;
+        }
+        .arrow_right {
+            cursor: pointer;
+            width: 125px;
+        }
+    }
+}
+.info_host {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    img {
+        border-radius: 66px;
+    }
+    .host_title_detail {
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            color: #ff6060;
+            line-height: 142.6%;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .content_tag {
+            display: flex;
+            gap: 5px;
+
+            .tag {
+                padding: 5px;
+                background-color: #ff6060;
+                color: #ffff;
+                border-radius: 25px;
+                text-align: center;
+                width: 180px;
+            }
+        }
+    }
+    .host_rating_img {
+        .fa-solid {
+            color: #ff6060;
+        }
+        .fa-regular {
+            color: #e3e3e3;
+        }
+    }
+}
+
+.content_info {
+    display: flex;
+    justify-content: space-between;
+    .title_detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px 5px 10px;
+        height: 50px;
+        border-radius: 10px 10px 5px 5px;
+        background: var(--Red, #ff6060);
+        h2 {
+            color: #ffff;
+        }
+        .fa-chevron-up {
+            color: #ffff;
+        }
+    }
+    p {
+        background: #f6f6f673;
+        margin: 0px;
+        padding: 15px;
+    }
+    li {
+        background: #f6f6f673;
+        margin: 0px;
+        padding: 9px 0px 5px 15px;
+    }
+}
+
+.content_description {
+    width: 40%;
+    padding: 20px;
+}
+.content_equipement {
+    width: 41%;
+    padding: 20px;
+}

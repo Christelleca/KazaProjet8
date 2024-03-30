@@ -9,10 +9,12 @@ const Home = () => {
                     src="src/assets/images/header_home.png"
                     alt="image banner accueil"
                 />
-                <h1>Chez vous, partout ailleurs</h1>
+                <h1>Chez vous, partout et ailleurs</h1>
             </div>
-            <div className="gallery">
-                <Thumb annonces={annonces} />
+            <div className="concent_gallery">
+                <div className="gallery">
+                    <Thumb annonces={annonces} />
+                </div>
             </div>
         </div>
     );

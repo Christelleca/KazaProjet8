@@ -5,8 +5,10 @@ const footer = () => {
         <div className="footer">
             {" "}
             <img src={logoFooter} alt="Logo footer"></img>
-            <p>© 2020 Kasa. All</p>
-            <p>rights reserved</p>
+            <div className="footer_txt">
+                <p>© 2020 Kasa. All</p>
+                <p>rights reserved</p>
+            </div>
         </div>
     );
 };
