@@ -13,7 +13,7 @@ const Header = () => {
                             isActive ? "underline" : ""
                         }
                     >
-                        <li>Acceuil</li>
+                        <li>Accueil</li>
                     </NavLink>
                     <NavLink
                         to="/About"

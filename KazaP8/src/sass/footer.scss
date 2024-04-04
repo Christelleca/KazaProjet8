@@ -16,6 +16,10 @@
     }
     .footer_txt {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+        width: 46%;
         p {
             margin: 4px;
             color: white;
