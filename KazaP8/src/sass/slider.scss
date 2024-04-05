@@ -8,6 +8,9 @@
     overflow: hidden;
     position: relative;
     height: 415px;
+    @media (max-width: 940px) {
+        height: 255px;
+    }
     img {
         width: 100%;
         height: 100%;
@@ -15,11 +18,10 @@
         border-radius: 25px;
     }
     .arrow_content {
-        align-items: center;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         left: 50%;
-        padding: 0 10px;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -28,10 +30,16 @@
         .arrow_left {
             cursor: pointer;
             width: 125px;
+            @media (max-width: 940px) {
+                width: 24px;
+            }
         }
         .arrow_right {
             cursor: pointer;
             width: 125px;
+            @media (max-width: 940px) {
+                width: 24px;
+            }
         }
     }
     span {
@@ -40,5 +48,8 @@
         right: 50%;
         font-size: 18px;
         color: #fff;
+        @media (max-width: 940px) {
+            font-size: 13px;
+        }
     }
 }

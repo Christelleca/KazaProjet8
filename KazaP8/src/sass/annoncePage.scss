@@ -1,20 +1,36 @@
 .annonce_content {
     padding: 0px 50px 140px;
+    @media (max-width: 940px) {
+        padding: 20px 0px;
+    }
     .info_host {
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        padding: 20px;
+        @media (max-width: 940px) {
+            flex-direction: column;
+            padding: 0;
+        }
         .host_title_detail {
             width: 50%;
+            @media (max-width: 940px) {
+                width: 100%;
+            }
             h1 {
                 font-size: 36px;
                 font-weight: 500;
                 color: #ff6060;
                 line-height: 142.6%;
+                @media (max-width: 940px) {
+                    font-size: 18px;
+                }
             }
             h2 {
                 font-size: 18px;
                 font-weight: 500;
+                @media (max-width: 940px) {
+                    font-size: 14px;
+                }
             }
             .content_tag {
                 display: flex;
@@ -30,17 +46,30 @@
                     border-radius: 25px;
                     height: 25px;
                     width: 150px;
+                    @media (max-width: 940px) {
+                        width: 85px;
+                    }
                     p {
                         color: #ffff;
                         text-align: center;
                         font-size: 14px;
                         font-weight: 700;
+                        @media (max-width: 940px) {
+                            font-size: 10px;
+                        }
                     }
                 }
             }
         }
         .host_rating_img {
             padding: 15px;
+            @media (max-width: 940px) {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-items: center;
+                padding: 0;
+            }
             .host_img_name {
                 display: flex;
                 align-items: center;
@@ -54,6 +83,9 @@
                 }
                 img {
                     border-radius: 66px;
+                    @media (max-width: 940px) {
+                        width: 75px;
+                    }
                 }
             }
             .rating_star {
@@ -61,6 +93,10 @@
                 justify-content: end;
                 padding: 20px;
                 font-size: 25px;
+                @media (max-width: 940px) {
+                    font-size: 20px;
+                    padding: 0;
+                }
                 .fa-solid {
                     color: #ff6060;
                 }
@@ -74,10 +110,16 @@
     .content_info {
         display: flex;
         justify-content: space-between;
-
+        @media (max-width: 940px) {
+            display: block;
+        }
         .content_description {
             width: 40%;
             padding: 20px;
+            @media (max-width: 940px) {
+                width: 100%;
+                padding: 0;
+            }
             p {
                 background: #f6f6f673;
                 margin: 0px;
@@ -89,6 +131,10 @@
         .content_equipement {
             width: 41%;
             padding: 20px;
+            @media (max-width: 940px) {
+                width: 100%;
+                padding: 15px 0px 20px;
+            }
             .equipment_list {
                 background: #f6f6f673;
                 margin: 0px;
@@ -107,12 +153,18 @@
             height: 50px;
             border-radius: 10px 10px 5px 5px;
             background: var(--Red, #ff6060);
+            @media (max-width: 940px) {
+                height: 33px;
+            }
             h2 {
                 color: #ffff;
+                @media (max-width: 940px) {
+                    font-size: 17px;
+                }
             }
             .fa-chevron-up {
                 color: #ffff;
-                font-size: 25px;
+                font-size: 20px;
                 transition: transform 0.5s ease;
             }
             .rotate {
