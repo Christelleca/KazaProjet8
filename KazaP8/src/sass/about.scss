@@ -50,7 +50,7 @@
                     color: #ffff;
                     font-size: 30px;
                     cursor: pointer;
-                    transition: transform 0.3s ease;
+                    transition: transform 0.5s ease;
                 }
                 .fa-chevron-up.rotate {
                     transform: rotate(-180deg);
@@ -60,7 +60,7 @@
                 overflow: hidden;
                 position: relative;
                 max-height: 0;
-                transition: all 0.4s;
+                transition: all 0.5s;
                 background: #f6f6f673;
                 p {
                     margin: 8px;
