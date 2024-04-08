@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 import Slider from "../components/Slider";
 import annonces from "../data/annonces.json";
+import Collapse from "../components/CollapseComponent";
 
 const findAnnonceID = (id) => {
     return annonces.find((annonce) => annonce.id === id);
@@ -65,50 +66,19 @@ const Annonce = () => {
                 </section>
             </article>
             <article className="content_info">
-                <section className="content_description">
-                    <div
-                        className="title_detail"
-                        onClick={toggleDescriptionExpand}
-                    >
-                        <h2>Description</h2>
-                        <i
-                            className={`fa-solid fa-chevron-up ${
-                                descriptionExpanded ? "rotate" : ""
-                            }`}
-                        ></i>
-                    </div>
-                    <div
-                        className={`content_detail ${
-                            descriptionExpanded ? "show" : ""
-                        }`}
-                    >
-                        <p>{annonce.description}</p>
-                    </div>
-                </section>
-                <section className="content_equipement">
-                    <div
-                        className="title_detail"
-                        onClick={toggleEquipmentsExpand}
-                    >
-                        <h2>Équipements</h2>
-                        <i
-                            className={`fa-solid fa-chevron-up ${
-                                equipmentsExpanded ? "rotate" : ""
-                            }`}
-                        ></i>
-                    </div>
-                    <div
-                        className={`content_detail ${
-                            equipmentsExpanded ? "show" : ""
-                        }`}
-                    >
-                        <ul className="equipment_list">
-                            {annonce.equipments.map((equipment, index) => (
-                                <li key={index}>{equipment}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </section>
+                <Collapse
+                    title="Description"
+                    content={annonce.description}
+                    expanded={descriptionExpanded}
+                    toggleExpand={toggleDescriptionExpand}
+                />
+
+                <Collapse
+                    title="Équipements"
+                    content={annonce.equipments}
+                    expanded={equipmentsExpanded}
+                    toggleExpand={toggleEquipmentsExpand}
+                />
             </article>
         </div>
     );

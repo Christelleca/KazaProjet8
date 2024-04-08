@@ -5,8 +5,9 @@
 @use "./sass/annoncePage";
 @use "./sass/slider";
 @use "./sass/footer";
-@use "./sass/notFound.scss";
-@use "./sass/about.scss";
+@use "./sass/notFound";
+@use "./sass/about";
+@use "./sass/collapses";
 
 * {
     font-family: "montserrat", sans-serif;

@@ -15,6 +15,18 @@ const Slider = ({ pictures }) => {
         );
     };
 
+    if (pictures.length === 1) {
+        return (
+            <div className="pictures">
+                <img
+                    src={pictures[currentImageIndex]}
+                    alt="image présentation annonce"
+                    key={pictures[currentImageIndex]}
+                />
+            </div>
+        );
+    }
+
     return (
         <div className="pictures">
             <img
@@ -36,7 +48,7 @@ const Slider = ({ pictures }) => {
                     alt="flèche droite"
                     onClick={arrowRight}
                 />
-            </div>{" "}
+            </div>
             <span className="count">
                 {currentImageIndex + 1}/{pictures.length}
             </span>

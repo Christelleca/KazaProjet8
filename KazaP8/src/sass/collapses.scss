@@ -1,0 +1,118 @@
+//collapse du about//
+
+.about_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    padding: 10px 0px 10px;
+    @media (max-width: 375px) {
+        width: 100%;
+    }
+    .collapse_section {
+        padding: 15px;
+
+        .collapse_title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 15px 5px 10px;
+            height: 45px;
+            border-radius: 10px 10px 5px 5px;
+            background: var(--Red, #ff6060);
+            h2 {
+                color: #ffff;
+            }
+            .fa-chevron-up {
+                color: #ffff;
+                font-size: 30px;
+                cursor: pointer;
+                transition: transform 0.5s ease;
+            }
+            .fa-chevron-up.rotate {
+                transform: rotate(-180deg);
+            }
+        }
+        .collapse_content {
+            overflow: hidden;
+            position: relative;
+            max-height: 0;
+            transition: all 0.5s;
+            background: #f6f6f673;
+            p {
+                margin: 8px;
+            }
+        }
+        .collapse_content.show {
+            max-height: 1000px;
+        }
+    }
+}
+
+//collapse des annonces//
+
+.content_info {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 940px) {
+        display: block;
+    }
+    .collapse_section {
+        width: 40%;
+        padding: 20px;
+        @media (max-width: 940px) {
+            width: 100%;
+            padding: 5px 0px 25px;
+        }
+        .collapse_title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 15px 5px 10px;
+            height: 50px;
+            border-radius: 10px 10px 5px 5px;
+            background: var(--Red, #ff6060);
+            @media (max-width: 940px) {
+                height: 33px;
+            }
+            h2 {
+                color: #ffff;
+                @media (max-width: 940px) {
+                    font-size: 17px;
+                }
+            }
+            .fa-chevron-up {
+                color: #ffff;
+                font-size: 20px;
+                transition: transform 0.5s ease;
+            }
+            .rotate {
+                transform: rotate(-180deg);
+            }
+        }
+        .collapse_content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease;
+            background: #f6f6f673;
+            margin: 0px;
+            p {
+                background: #f6f6f673;
+                margin: 0px;
+                padding: 20px 15px 20px 15px;
+                font-size: 18px;
+            }
+            ul {
+                padding: 20px;
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .collapse_content.show {
+            max-height: 1000px;
+        }
+    }
+}
