@@ -51,5 +51,8 @@
         @media (max-width: 940px) {
             font-size: 13px;
         }
+        @media (max-width: 375px) {
+            display: none;
+        }
     }
 }

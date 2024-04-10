@@ -23,6 +23,9 @@
                 font-weight: 500;
                 margin: 0 10px;
                 list-style: none;
+                @media (max-width: 375px) {
+                    text-transform: uppercase;
+                }
             }
         }
     }
